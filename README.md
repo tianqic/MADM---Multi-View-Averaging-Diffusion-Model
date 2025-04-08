@@ -3,7 +3,11 @@ https://arxiv.org/abs/2406.08374
 
 **Tianqi Chen, Jun Hou, Yinchi Zhou, Huidong Xie, Xiongchao Chen, Qiong Liu, Xueqi Guo, Menghua Xia, James S. Duncan, Chi Liu, Bo Zhou**
 
-This repository contains the official implementation of **MADM**, a novel diffusion-based framework for ultra-low-dose PET reconstruction. MADM significantly reduces radiation exposure by eliminating the need for additional CT scans and improves image quality through multi-view integration and attenuation correction.
+This repository contains the official implementation of **MADM** (2.5D Multi-view Averaging Diffusion Model), a novel diffusion-based framework for 3D medical image translation, with a focus on CT-free ultra-low-dose PET reconstruction. MADM enables high-quality recovery of standard-dose, attenuation-corrected PET (AC-SDPET) directly from non-attenuation-corrected low-dose PET (NAC-LDPET), effectively reducing both tracer dosage and eliminating the need for CT-based attenuation correction.
+
+By leveraging lightweight 2.5D conditional diffusion models across axial, coronal, and sagittal views, MADM ensures spatial consistency through multi-view averaging at each denoising step. Additionally, a CNN-based one-step prior generator is used to initialize the diffusion process, enhancing accuracy and reducing inference time.
+
+This framework offers a memory-efficient, slice-consistent, and clinically valuable solution for safe and accurate PET imaging without relying on CT scans.
 
 <p align="center">
   <img src="figure/Figure_pipline.png" alt="MADM Pipeline" width="1000"/>
