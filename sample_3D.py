@@ -121,7 +121,7 @@ def create_argparser():
         avg_start_number=2,
         sample_num=1,
         save_root="MADM",
-        load_prior_root="cGAN_pripr",
+        load_prior_root="cGAN_prior",
         data_root="NAC_data",
     )
     defaults.update(model_and_diffusion_defaults())
